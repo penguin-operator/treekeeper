@@ -12,7 +12,7 @@ Made by:
 # Make.sh
 This is an environment file, which acts like `venv/bin/activate` in python.
 To activate it use
-``` shell
+```shell
 operator@penguin:treekeeper$ source make.sh
 (make.sh) operator@penguin:treekeeper$ # or
 (make.sh) operator@penguin:treekeeper$ . make.sh
@@ -24,3 +24,11 @@ After this you can use these commands:
 - `run` to run the executable safely
 - `envexit` to exit the venv
 - `envreset` to restart the venv to see your customizations on it
+- `help` to get short help for first 2 commands
+
+Update: Commands are now executable without sourcing
+```shell
+operator@oenguin:treekeeper$ chmod +x make.sh
+operator@oenguin:treekeeper$ ./make.sh build
+operator@oenguin:treekeeper$ ./make.sh run --some --args
+```

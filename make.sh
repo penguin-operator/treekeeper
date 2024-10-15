@@ -22,6 +22,7 @@ envexit () {
 	unset -f run
 	unset -f envexit
 	unset -f envreset
+	unset -f help
 }
 
 envreset () {
@@ -29,3 +30,21 @@ envreset () {
 	source make.sh
 	reset
 }
+
+help () {
+	echo "Usage: make.sh COMMAND [ OPTIONS ... ]"
+	echo "	build	build the program"
+	echo "	run	run the program"
+}
+
+case $1 in
+	build)
+		build
+		;;
+	run)
+		run ${@:2}
+		;;
+	*)
+		help
+		;;
+esac
