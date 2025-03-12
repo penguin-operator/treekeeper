@@ -1,0 +1,5 @@
+#!/bin/tail -n 4
+Tools are bash scripts you that run.
+Tools available:
+tools/build  build the program
+tools/run    run the program
