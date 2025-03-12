@@ -1,0 +1,19 @@
+OLD_PS1=$PS1
+OLD_PATH=$PATH
+
+export PS1="(tools) $PS1"
+export PATH=$PATH:$PWD/tools
+export LIB=(ncursesw)
+export BIN=treekeeper
+
+envexit () {
+	export PS1=$OLD_PS1
+	export PATH=$OLD_PATH
+
+	unset OLD_PS1 OLD_PATH BIN LIB
+}
+
+envreset () {
+	envexit
+	source tools/env
+}
